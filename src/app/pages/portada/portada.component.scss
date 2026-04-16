@@ -1,0 +1,55 @@
+.contenido-portada {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-portada a {
+  position: relative;
+  display: inline-block;
+  color: #000;
+}
+
+
+.contenido-portada img {
+  display: block;
+  margin: 0 auto;
+}
+
+.contenido-portada h2 {
+  position: absolute;
+  left: 48%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  max-width: 10em;
+}
+
+.sello {
+  position: absolute;
+  left: 57%;
+  top: 28%;
+  transform: translate(-50%, -50%);
+  max-width: 10em;
+}
+
+.contenido-portada h4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.superposicion img, h4, h2{
+    z-index: 999;
+}
+
+.contenido-portada img {
+  transition: filter 0.3s;
+}
+
+.contenido-portada img:hover {
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+}

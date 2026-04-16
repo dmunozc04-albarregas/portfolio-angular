@@ -1,59 +1,69 @@
-# Portfolio
+# 📁 Portfolio de David Muñoz
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.22.
+![Angular](https://img.shields.io/badge/Angular-19.x-red?logo=angular) ![SCSS](https://img.shields.io/badge/SCSS-Enabled-cc6699?logo=sass)
 
-## Development server
+## Descripción
 
-To start a local development server, run:
+Este es el portfolio personal de **David Muñoz**, desarrollado con Angular y diseñado con temática de investigación/expediente. Aquí muestro mis proyectos, habilidades y experiencia como desarrollador multiplataforma.
 
-```bash
-ng serve
+## 🚀 Demo
+
+> _Puedes ver una demo local ejecutando el servidor de desarrollo (ver abajo)._
+
+## 🛠️ Tecnologías principales
+
+- [Angular 19.x](https://angular.io/)
+- SCSS (Sass)
+- Angular Material
+- HTML5 + TypeScript
+- Responsive Design
+
+## 📂 Estructura del proyecto
+
+```
+src/
+  app/
+    components/
+      hero/
+      sobre-mi/
+      proyectos/
+    assets/
+      images/
+  styles.scss
+  index.html
+angular.json
+package.json
+README.md
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚡ Instalación y uso
 
-## Code scaffolding
+1. Instala dependencias:
+   ```bash
+   npm install
+   ```
+2. Inicia el servidor de desarrollo:
+   ```bash
+   ng serve
+   ```
+   Luego abre [http://localhost:4200](http://localhost:4200) en tu navegador.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧩 Comandos útiles
 
-```bash
-ng generate component component-name
-```
+- Crear un nuevo componente:
+  ```bash
+  ng generate component nombre-componente
+  ```
+- Construir para producción:
+  ```bash
+  ng build --configuration production
+  ```
+- Ejecutar tests unitarios:
+  ```bash
+  ng test
+  ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧪 Tests
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Unitarios:** Karma + Jasmine (`ng test`)
+- **E2E:** Puedes añadir Cypress, Playwright o Protractor según tus preferencias.

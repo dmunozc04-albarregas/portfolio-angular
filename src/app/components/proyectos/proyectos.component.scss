@@ -1,0 +1,210 @@
+.investigacion-line-horizontal {
+    align-self: center;
+    width: 2.2rem;
+    height: 0.32rem;
+    background: repeating-linear-gradient(90deg, #d60000 0 12px, #ff2f2f 12px 24px);
+    border-radius: 1rem;
+    margin: 0 0.2rem;
+    box-shadow: 0 1px 4px rgba(120,0,0,0.13);
+    opacity: 0.95;
+}
+.investigacion-line {
+    width: 90%;
+    height: 0.35rem;
+    margin: 1.2rem auto;
+    background: repeating-linear-gradient(90deg, #d60000 0 18px, #ff2f2f 18px 36px);
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 8px rgba(120,0,0,0.18);
+    opacity: 0.92;
+}
+.proyectos {
+    padding: 2rem 1rem;
+}
+
+.proyectos h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tablero-wrap {
+    position: relative;
+    width: min(92vw, 75em);
+    margin: 0 auto;
+    aspect-ratio: 5 / 3;
+}
+
+.tablero {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tablero {
+    z-index: 1;
+}
+
+.datos-tablero {
+    z-index: 2;
+    pointer-events: none;
+}
+
+.postits-column {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 4;
+}
+
+.postits-row {
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    margin-bottom: 4em;
+}
+
+.postit-card {
+    position: relative;
+    overflow: visible;
+    width: clamp(7rem, 14vw, 11rem);
+    min-height: clamp(7rem, 13vw, 10rem);
+    background: #f4d35e;
+    border: 1px solid #c6a63e;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+    color: #2f2a1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(-2deg);
+}
+
+.postit-card::before {
+    content: "";
+    position: absolute;
+    top: -0.95rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 28%, #ffb3b3 0 24%, #ff2f2f 40%, #d60000 72%, #8a0000 100%);
+    border: 1px solid #5f0000;
+    box-shadow: 0 2px 6px rgba(76, 0, 0, 0.55);
+    z-index: 3;
+}
+
+.postit-card::after {
+    content: "";
+    position: absolute;
+    top: -0.05rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.16rem;
+    height: 0.72rem;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #f2f2f2 0%, #9f9f9f 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.postit-card:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.postit-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(0.8rem, 1.3vw, 1rem);
+}
+
+.postit-card p {
+    margin: 0;
+    font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+}
+
+.zona-investigacion {
+    position: absolute;
+    left: 16%;
+    right: 16%;
+    bottom: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+
+.mapa {
+    width: clamp(14rem, 32vw, 26rem);
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+.interrogacion-sm {
+    position: absolute;
+    width: 5em;
+    z-index: 4;
+    filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.35));
+}
+
+.i1 {
+    left: 0%;
+    top: 50%;
+    transform: rotate(-12deg);
+}
+
+.i2 {
+    right: 10%;
+    top: 50%;
+    transform: rotate(10deg);
+}
+
+.i3 {
+    left: 20%;
+    bottom: 115%;
+    transform: rotate(6deg);
+}
+
+.i4 {
+    right: 25%;
+    bottom: 152%;
+    transform: rotate(-8deg);
+}
+
+@media (max-width: 768px) {
+    .postits-column {
+        left: 10%;
+        right: 10%;
+        top: 17%;
+    }
+
+    .postits-row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .postit-card {
+        width: clamp(6rem, 22vw, 8rem);
+        min-height: clamp(6rem, 20vw, 8rem);
+    }
+
+    .zona-investigacion {
+        left: 10%;
+        right: 10%;
+        bottom: 2%;
+    }
+
+    .mapa {
+        width: clamp(11rem, 52vw, 16rem);
+    }
+
+    .interrogacion-sm {
+        width: clamp(2.2rem, 7vw, 3rem);
+    }
+}

@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+}
+
+.info {
+  position: absolute;
+  left: 64%;
+  top: 84%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 55em;
+  display: block;
+  margin: 0 auto;
+}
+
+ul li {
+  max-width: 20em;
+  padding-bottom: 0.5em;
+}
+
+.imagen-carpeta {
+  position: absolute;
+}
+
+.clip,
+.foto {
+  position: absolute;
+}
+
+.clip {
+  left: 24%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.foto {
+  left: 27%;
+  top: 64%;
+  transform: translate(-50%, -50%);
+}
+
+.clip img {
+  width: 9em;
+}
+
+.foto img {
+  width: 8em;
+}
+
+.sello-circular {
+    position: absolute;
+    left: 63%;
+    top: 112%;
+    width: 8em;
+    height: auto;
+}

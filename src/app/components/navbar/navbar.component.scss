@@ -1,0 +1,23 @@
+
+.navbar, .navbar a {
+    padding: 1em;
+}
+
+.navbar {
+  background: var(--papel);
+  border-bottom: 2px solid var(--ocre);
+  display: flex;
+  justify-content: center;
+  padding: 1.2em 0;
+  box-shadow: 0 2px 6px rgba(166, 162, 158, 0.08);
+  border-radius: 0 0 8px 8px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #6F4E37;
+}
+
+.navbar a:hover {
+    color: var(--azul);
+}

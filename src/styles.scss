@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use "@angular/material" as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+} /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f5ecd9;
+  cursor: url('./assets/images/cursor\ \(2\).png'), auto;
+}
+
+:root {
+    --papel: #F5ECD9;
+    --sepia: #D2BA91;
+    --ocre: #BC9B6A;
+    --marron: #6F4E37;
+    --granate: #B03A2E;
+    --gris: #A6A29E;
+    --azul: #56707F;
+    --verde: #70846C;
+}

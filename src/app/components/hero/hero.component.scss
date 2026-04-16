@@ -1,0 +1,78 @@
+.hero {
+    border: 2px solid rgba(133, 90, 48, 0.85);
+    border-radius: 0.85rem;
+    background: var(--marron);
+    color: var(--sepia);
+    padding: 1rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero :is(mat-card-header, mat-card-content, mat-card-footer) {
+    padding: 0;
+}
+
+.importante {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #ff8f8f;
+    border: 1px dashed rgba(255, 122, 122, 0.65);
+    background: rgba(86, 12, 12, 0.28);
+    padding: 0.55rem 0.75rem;
+    font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+}
+
+.case-title h2 {
+    margin: 0.15rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: clamp(1rem, 2.2vw, 1.45rem);
+}
+
+.code {
+    margin: 0;
+    color: #e7ba7a;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+}
+
+.hero-min {
+  background: var(--sepia);
+  color: #222;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  padding: 2.5rem 1.5rem;
+  max-width: 90em;
+  margin: 2.5rem auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-min-content {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-min-content h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.3rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.hero-min-content h4 {
+  margin: 0 0 1.2rem 0;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: #555;
+}
+
+.estado {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--granate);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
