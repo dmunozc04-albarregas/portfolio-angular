@@ -20,8 +20,15 @@ ul li {
   padding-bottom: 0.5em;
 }
 
-.imagen-carpeta {
+.imagen-carpeta, .logo {
   position: absolute;
+}
+
+.logo {
+    width: 10em;
+    height: auto;
+    left: 28em;
+    top: 38em;
 }
 
 .clip,

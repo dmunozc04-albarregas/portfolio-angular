@@ -129,6 +129,14 @@
     font-size: clamp(0.7rem, 1.1vw, 0.9rem);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7d7c7c;
+}
+
 .zona-investigacion {
     position: absolute;
     left: 16%;

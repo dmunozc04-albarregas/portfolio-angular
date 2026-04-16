@@ -19,6 +19,7 @@ html {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -26,7 +27,11 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #f5ecd9;
-  cursor: url('./assets/images/cursor\ \(2\).png'), auto;
+  cursor: url('./assets/images/cursor.png'), auto;
+}
+
+a:hover {
+  cursor: url('./assets/images/cursor-enlace.png'), auto;
 }
 
 :root {

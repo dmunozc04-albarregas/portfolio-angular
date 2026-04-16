@@ -1,8 +1,8 @@
 <section class="navbar">
     <nav>
-        <a [routerLink]="[]" fragment="inicio">Inicio</a>
-        <a href="">Sobre mí</a>
-        <a href="">Proyectos</a>
+        <a (click)="scrollToAnchor('inicio')">Inicio</a>
+        <a (click)="scrollToAnchor('sobre-mi')">Sobre mí</a>
+        <a (click)="scrollToAnchor('proyectos')">Proyectos</a>
         <a href="">Habilidades</a>
         <a href="">Experiencia</a>
         <a href="">Contacto</a>
