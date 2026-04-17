@@ -27,11 +27,37 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #f5ecd9;
-  cursor: url('./assets/images/cursor.png'), auto;
+  cursor: url('assets/images/cursor.png') 2 2, auto;
 }
 
-a:hover {
-  cursor: url('./assets/images/cursor-enlace.png'), auto;
+a,
+button,
+[class*="mat-mdc"],
+.mdc-button,
+.mdc-icon-button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: url('assets/images/cursor-enlace.png') 4 4, pointer !important;
+}
+
+a:hover,
+button:hover,
+[class*="mat-mdc"]:hover,
+.mdc-button:hover,
+.mdc-icon-button:hover,
+[role="button"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+a:focus-visible,
+button:focus-visible,
+[class*="mat-mdc"]:focus-visible,
+.mdc-button:focus-visible,
+.mdc-icon-button:focus-visible,
+[role="button"]:focus-visible {
+  cursor: url('assets/images/cursor-enlace.png') 4 4, pointer !important;
 }
 
 :root {

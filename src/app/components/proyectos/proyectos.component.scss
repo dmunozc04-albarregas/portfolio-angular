@@ -31,6 +31,7 @@
     width: min(92vw, 75em);
     margin: 0 auto;
     aspect-ratio: 5 / 3;
+    overflow: hidden;
 }
 
 .tablero {
@@ -45,15 +46,41 @@
     z-index: 1;
 }
 
+.tablero-wrap > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 6;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: var(--granate);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tablero-wrap > button:hover {
+    background-color: var(--azul);
+}
+
+.tablero-wrap > .btn-anterior {
+    left: 15%;
+}
+
+.tablero-wrap > .btn-siguiente {
+    right: 15%;
+}
+
 .datos-tablero {
     z-index: 2;
     pointer-events: none;
 }
 
-.postits-column {
+.postit {
     position: absolute;
     left: 10%;
-    top: 15%;
+    top: 13%;
     right: 8%;
     display: flex;
     flex-direction: column;
@@ -73,8 +100,8 @@
 .postit-card {
     position: relative;
     overflow: visible;
-    width: clamp(7rem, 14vw, 11rem);
-    min-height: clamp(7rem, 13vw, 10rem);
+    width: 30em;
+    min-height: 22em;
     background: #f4d35e;
     border: 1px solid #c6a63e;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
@@ -86,7 +113,7 @@
     transform: rotate(-2deg);
 }
 
-.postit-card::before {
+.postit-card::before, .titulo-evidencias::before {
     content: "";
     position: absolute;
     top: -0.95rem;
@@ -101,7 +128,7 @@
     z-index: 3;
 }
 
-.postit-card::after {
+.postit-card::after, .titulo-evidencias::after {
     content: "";
     position: absolute;
     top: -0.05rem;
@@ -139,18 +166,16 @@ a:hover {
 
 .zona-investigacion {
     position: absolute;
-    left: 16%;
-    right: 16%;
-    bottom: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 15%;
+    bottom: -142%;
+    width: clamp(10rem, 24vw, 16rem);
+    display: block;
     z-index: 3;
 }
 
-
 .mapa {
-    width: clamp(14rem, 32vw, 26rem);
+    width: 100%;
+    display: block;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
 }
 
@@ -162,34 +187,50 @@ a:hover {
 }
 
 .i1 {
-    left: 0%;
-    top: 50%;
+    left: 20%;
+    top: -50%;
     transform: rotate(-12deg);
 }
 
 .i2 {
-    right: 10%;
+    left: 350%;
     top: 50%;
     transform: rotate(10deg);
 }
 
 .i3 {
     left: 20%;
-    bottom: 115%;
+    bottom: 215%;
     transform: rotate(6deg);
 }
 
 .i4 {
-    right: 25%;
-    bottom: 152%;
+    left: 315%;
+    bottom: 175%;
     transform: rotate(-8deg);
 }
 
 @media (max-width: 768px) {
-    .postits-column {
+    .tablero-wrap > .btn-anterior {
+        left: 1.5%;
+        top: 86%;
+        transform: none;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .tablero-wrap > .btn-siguiente {
+        right: 1.5%;
+        top: 86%;
+        transform: none;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .postit {
         left: 10%;
         right: 10%;
-        top: 17%;
+        top: 13%;
     }
 
     .postits-row {
@@ -203,16 +244,37 @@ a:hover {
     }
 
     .zona-investigacion {
-        left: 10%;
-        right: 10%;
-        bottom: 2%;
+        left: 7%;
+        bottom: 5%;
+        width: clamp(8rem, 26vw, 11rem);
     }
 
     .mapa {
-        width: clamp(11rem, 52vw, 16rem);
+        width: 100%;
     }
 
     .interrogacion-sm {
         width: clamp(2.2rem, 7vw, 3rem);
     }
+}
+
+.imagenProyecto {
+    margin-top: .5em;
+    width: 21em;
+    max-height: 15em;
+    margin-bottom: .5em;
+}
+
+.tecnologias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5em;
+    gap: .5em;
+}
+
+.titulo-evidencias {
+    background-color: #fff;
+    padding: .5em;
 }

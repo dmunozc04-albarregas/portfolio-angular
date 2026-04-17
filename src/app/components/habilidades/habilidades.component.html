@@ -1,0 +1,30 @@
+<section class="habilidades">
+  <h1>Habilidades</h1>
+
+  <mat-card class="expediente-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>
+        <b>Habilidades del sujeto</b>
+      </mat-card-title>
+      <mat-card-subtitle>Stack técnico</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="skills-grid">
+        <article class="skill-item" *ngFor="let skill of skills">
+          <div class="skill-head">
+            <h3>{{ skill.nombre }}</h3>
+            <span class="skill-level">{{ skill.nivel }}</span>
+          </div>
+
+          <p class="skill-desc">{{ skill.descripcion }}</p>
+
+          <mat-progress-bar
+            mode="determinate"
+            [value]="nivelAProgreso(skill.nivel)"
+          ></mat-progress-bar>
+        </article>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

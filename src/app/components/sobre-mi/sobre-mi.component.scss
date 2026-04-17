@@ -5,7 +5,7 @@ h1 {
 .info {
   position: absolute;
   left: 64%;
-  top: 84%;
+  top: 87%;
   transform: translate(-50%, -50%);
 }
 
@@ -63,4 +63,14 @@ ul li {
     top: 112%;
     width: 8em;
     height: auto;
+}
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.redes a {
+  color: #000;
 }

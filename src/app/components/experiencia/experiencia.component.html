@@ -1,11 +1,44 @@
-<h1>Experiencia</h1>
+<section class="experiencia">
+  <h1>Experiencia</h1>
+  <h3>Movimientos del sujeto</h3>
 
-<!-- <div class="timeline">
-    <mat-card class="empresa" appearance="outlined">
-      <mat-card-content>
-        <h3>CH Ordenadores</h3>
-        <img src="https://chordenadores.es/wp-content/uploads/2022/11/logo-ch-ordenadores.jpeg" alt="">
-        <p>05/2025 - 06/2025</p>
-      </mat-card-content>
-    </mat-card>
-</div> -->
+  <img class="huellas" src="../../../assets/images/huellas.png" alt="">
+  <img class="gorro" src="../../../assets/images/gorro-detective.png" alt="">
+  <img class="pipa-detective" src="../../../assets/images/pipa-detective.png" alt="">
+
+  <div class="timeline-list">
+    @for (exp of experiencias; track exp.empresa) {
+    <article class="timeline-item">
+      <p class="step-periodo">{{ exp.periodo }}</p>
+      <p class="step-empresa">{{ exp.empresa }}</p>
+
+      <mat-card class="empresa-card" appearance="outlined">
+        <mat-card-content>
+          <div class="empresa-header">
+            <img [src]="exp.logo" [alt]="exp.empresa" class="empresa-logo" />
+            <div>
+              <h3>{{ exp.puesto }}</h3>
+              <b class="empresa-meta">{{ exp.empresa }} · {{ exp.ubicacion }}</b>
+            </div>
+          </div>
+
+          <p class="empresa-descripcion">{{ exp.descripcion }}</p>
+
+          <ul class="empresa-logros">
+            @for (logro of exp.logros; track logro) {
+            <li>{{ logro }}</li>
+            }
+          </ul>
+
+          <div class="empresa-tech">
+            @for (tech of exp.tecnologias; track tech) {
+            <span class="tech-chip">{{ tech }}</span>
+            }
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </article>
+    }
+  </div>
+</section>
+
